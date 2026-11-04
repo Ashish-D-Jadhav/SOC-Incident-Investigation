@@ -1,2 +1,1 @@
-# SOC-Incident-Investigation
-SOC Analyst project demonstrating alert triage, log analysis and incident response
+# 01-Wazuh-Agent-Deployment
