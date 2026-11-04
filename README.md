@@ -1,1 +1,1 @@
-# 01-Wazuh-Agent-Deployment
+# 02-Connect-Agents-and-Deploy-Sysmon
