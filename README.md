@@ -120,5 +120,54 @@ The Windows Wazuh agent configuration file was updated to monitor the Sysmon Ope
 
 After updating the configuration, the Wazuh Agent service was restarted. 
 
+### Validation - Windows Sysmon 
 
+A search for "sysmon" within the Wazuh Dashboard confirmed that Sysmon events were successfully being forwarded and indexed. 
 
+Validation was performed by checking within the event data.: Microsoft-Windows-Sysmon/Operational 
+
+<img width="778" height="275" alt="image" src="https://github.com/user-attachments/assets/6b6b1441-311a-4c45-876d-365f184f130c" />
+
+## Sysmon Deployment - Linux 
+
+Sysmon for Linux was installed on the Ubuntu endpoint. 
+
+A telemetry collection configuration was downloaded from Microsoft's MSTIC repository and applied during installation. 
+
+After deployment: 
+
+<img width="963" height="533" alt="image" src="https://github.com/user-attachments/assets/1d3d6b8c-3450-4376-a533-c8f682e2e727" />
+
+Sysmon services started successfully and began logging system activity. 
+
+## Outcome 
+
+Successfully deployed and onboarded Windows and Ubuntu endpoints to the Wazuh platform. 
+
+Achievements: 
+
+✅ Wazuh Agent deployed on Windows 
+✅ Wazuh Agent deployed on Ubuntu 
+✅ Sysmon installed and configured on Windows 
+✅ Sysmon for Linux installed and configured 
+✅ Agent registration issue identified and resolved 
+✅ Endpoint telemetry successfully ingested into Wazuh 
+✅ Security events visible within the Wazuh Dashboard 
+
+This phase completed the endpoint onboarding process and established the telemetry pipeline required for detection engineering, monitoring, and incident investigation. 
+
+## Lessons Learned 
+
+- Learned how Wazuh agent registration works. 
+- Troubleshot authentication and connectivity issues. 
+- Gained experience analysing Wazuh service logs. 
+- Deployed Sysmon on Windows and Linux endpoints. 
+- Configured Wazuh to ingest Sysmon telemetry. 
+- Validated endpoint visibility within a SIEM platform. 
+
+## References 
+
+- Wazuh Documentation 
+- Microsoft Sysmon Documentation 
+- Olaf Hartong Sysmon Modular Configuration 
+- Sysmon for Linux 
