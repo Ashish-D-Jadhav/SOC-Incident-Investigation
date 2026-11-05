@@ -198,14 +198,14 @@ Successfully generated and analysed Windows and Linux security telemetry.
 
 ### Achievements:
 
-✅ Generated Windows account management events
-✅ Analysed Event IDs 4720, 4726, 4624 and 4732
-✅ Investigated user account creation and deletion activity
-✅ Correlated security identifiers (SID)
-✅ Analysed failed and successful SSH activity
-✅ Tracked SSH sessions using Session IDs
-✅ Investigated Linux command execution events
-✅ Validated end-to-end telemetry visibility within Wazuh
+- Generated Windows account management events
+- Analysed Event IDs 4720, 4726, 4624 and 4732
+- Investigated user account creation and deletion activity
+- Correlated security identifiers (SID)
+- Analysed failed and successful SSH activity
+- Tracked SSH sessions using Session IDs
+- Investigated Linux command execution events
+- Validated end-to-end telemetry visibility within Wazuh
 
 ## Lessons Learned
 
