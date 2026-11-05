@@ -130,6 +130,8 @@ Findings:
 - Multiple authentication failures recorded
 - The event demonstrated Wazuh's ability to detect unauthorised access attempts.
 
+<img width="1249" height="493" alt="image" src="https://github.com/user-attachments/assets/4ae88a49-033a-4749-b38f-da6d6234c6bb" />
+
 ### Successful SSH Login
 
 A successful SSH authentication was performed using a valid Ubuntu account.
@@ -139,6 +141,8 @@ Findings:
 - Source IP identified
 - User account identified
 - Session established successfully
+
+<img width="1262" height="479" alt="image" src="https://github.com/user-attachments/assets/764e8d63-bad1-4ab1-93ef-30246665653e" />
 
 ### Session Tracking
 
@@ -152,6 +156,8 @@ Using Session ID 10 it was possible to:
 - Build an activity timeline
 
 This demonstrates how session identifiers can be used to correlate multiple events during an investigation.
+
+<img width="1240" height="657" alt="image" src="https://github.com/user-attachments/assets/5c97aef4-5477-4fb1-9601-4fedd1b4a16b" />
 
 ### File Collection Activity
 
@@ -186,8 +192,29 @@ The Wazuh Manager service was restarted and normal functionality was restored.
 
 <img width="1388" height="782" alt="image" src="https://github.com/user-attachments/assets/300230e1-b424-458e-a1ce-2d72fb373dc6" />
 
+## Outcome
 
+Successfully generated and analysed Windows and Linux security telemetry.
 
+### Achievements:
+
+✅ Generated Windows account management events
+✅ Analysed Event IDs 4720, 4726, 4624 and 4732
+✅ Investigated user account creation and deletion activity
+✅ Correlated security identifiers (SID)
+✅ Analysed failed and successful SSH activity
+✅ Tracked SSH sessions using Session IDs
+✅ Investigated Linux command execution events
+✅ Validated end-to-end telemetry visibility within Wazuh
+
+## Lessons Learned
+
+- Learned how to interpret Windows Security Event IDs.
+- Developed familiarity with SID-based investigations.
+- Practised identifying account creation, deletion and group membership changes.
+- Investigated SSH authentication activity.
+- Learned how session identifiers can be used for event correlation.
+- Improved understanding of telemetry analysis within a SIEM platform.
 
 
 
