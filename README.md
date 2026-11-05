@@ -18,8 +18,8 @@ The objective of this phase was to onboard the Ubuntu and Windows virtual machin
 
 ## Lab Architecture - Part 2: Agent & Sysmon Integration
 
-     ```text
-                         Part 2 - Agent & Sysmon Integration
+     
+                 Part 2 - Agent & Sysmon Integration
 
      ┌─────────────────────────┐      ┌─────────────────────────┐
      │       Windows VM        │      │        Ubuntu VM        │
@@ -53,7 +53,7 @@ The objective of this phase was to onboard the Ubuntu and Windows virtual machin
                   │ • Log Analysis              │
                   │ • Incident Investigation    │
                   └─────────────────────────────┘
-     ```
+     
 ## Windows Agent Deployment
 
 ### Agent Installation
