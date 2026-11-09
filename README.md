@@ -1,4 +1,4 @@
-# Part 4 - Build Your SOC Dashboard
+# Part 4 - Build SOC Dashboard
 
 ## Objective
 
