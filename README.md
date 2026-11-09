@@ -121,10 +121,15 @@ Successfully created a SOC dashboard consisting of three security-focused visual
 Achievements:
 
 ✅ Built a Failed Windows Logon dashboard
+
 ✅ Built a Windows Account Changes dashboard
+
 ✅ Built a Linux Failed SSH Authentication dashboard
+
 ✅ Identified and resolved an index pattern issue
+
 ✅ Validated telemetry visibility across Windows and Linux endpoints
+
 ✅ Established a monitoring dashboard for ongoing investigations
 
 
