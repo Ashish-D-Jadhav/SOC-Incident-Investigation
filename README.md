@@ -178,6 +178,10 @@ Achievements:
 - Learned how Windows security events can be converted into actionable detections.
 - Improved understanding of detection engineering concepts.
 
+## Conclusion
+
+This phase introduced File Integrity Monitoring and custom detection engineering into the Wazuh SOC lab. Real-time monitoring successfully detected file modifications and deletions on both Windows and Ubuntu endpoints. Additionally, a custom Wazuh rule was developed to detect Guest account activation, demonstrating how Windows security events can be transformed into actionable detections.
+
 
 
 
