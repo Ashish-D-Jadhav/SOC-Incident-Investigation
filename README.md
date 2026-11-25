@@ -5,9 +5,13 @@ IT Analyst with 10+ years of experience in Azure, Intune, Active Directory, Micr
 Currently developing hands-on skills in:
 
 🛡️ Security Operations (SOC)
+
 🔍 Digital Forensics & Incident Response (DFIR)
+
 ⚡ Detection Engineering
+
 📊 SIEM Monitoring
+
 ☁️ Microsoft Security
 
 ## Technical Skills
