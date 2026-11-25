@@ -33,10 +33,16 @@ Built a complete SOC environment using Wazuh, Sysmon and Windows/Linux telemetry
 Key areas covered:
 
 ✅ Infrastructure Deployment
+
 ✅ Agent & Sysmon Integration
+
 ✅ Telemetry Analysis
+
 ✅ SOC Dashboard Development
+
 ✅ File Integrity Monitoring
+
 ✅ Custom Detection Rules
+
 ✅ Incident Investigation
 
