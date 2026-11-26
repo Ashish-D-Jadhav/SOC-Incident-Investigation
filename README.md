@@ -78,5 +78,65 @@ The purpose was to:
 | What should we recommend? | Disable Unused Accounts, Monitor Privileged Account Changes |
 
 
+## Incident 2: Linux Endpoint Activities 
 
+### Findings: 
+
+The investigation identified the following activities: 
+
+- Multiple failed SSH authentication attempts were recorded using an invalid username (fakeuser).  
+- Successful SSH authentication was performed using a valid Ubuntu account.  
+- SSH session activity was correlated using Session ID 10, allowing login, command execution, and logout events to be tracked.  
+- Contents of /etc/passwd were copied into loot.txt using shell commands. 
+
+### Investigation Summary 
+
+On the Linux server, both failed and successful SSH login attempts were detected. Session tracking allowed the entire sequence of login, activity, and logout events to be monitored. 
+
+### Who, What, When, Where, Why, and How 
+
+#### Who
+
+| | | |
+|---|---|---|
+| fakeuser | Invalid account used during failed SSH attempts |
+| mydfir | Valid account used for successful SSH authentication |
+
+#### What 
+
+The following activities occurred: 
+
+- Failed SSH authentication attempts. 
+- Successful SSH authentication. 
+
+#### When 
+
+SSH activity occurred during Linux telemetry generation and analysis 
+
+#### Where 
+
+The activities occurred on the following hosts: 
+
+| | | |
+|---|---|---|
+| Ubuntu Endpoint (MYDFIR-Linux)  | SSH activity, command execution, FIM alerts  |
+
+#### Why 
+
+The purpose was to: 
+
+- Validate SSH monitoring. 
+- Generate telemetry for SOC investigations 
+
+#### How 
+
+- SSH authentication attempts generated successful and failed login events.
+
+| Question          | Answer                                                      |
+|-------------------|--------------------------------------------------------------------|
+| What happened?  | SSH activity occurred |
+| When did it happen? | 21 Sept 2026 20:55 - 20:59 UTC |
+| Which hosts were involved? | MYDFIR-Linux  |
+| Which accounts were changed? | Failed SSH attempts using fakeuser were observed, followed by successful authentication using a valid account. |
+| What should we recommend? | Strengthen SSH Monitoring, Implement Threat Hunting Dashboards  |
 
