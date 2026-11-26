@@ -1,48 +1,82 @@
-# Hi, I'm Ashish Jadhav
+# 07-Incident-Investigation-Report
 
-IT Analyst with 10+ years of experience in Azure, Intune, Active Directory, Microsoft 365 and Endpoint Management.
+## Summary
 
-Currently developing hands-on skills in:
+During the investigation of security telemetry collected by the Wazuh SOC lab, multiple account management, authentication and file integrity events were identified across Windows and Ubuntu endpoints.  
 
-🛡️ Security Operations (SOC)
+The activity included creation and deletion of user accounts, changes to local administrator group membership, Guest account activation, SSH authentication attempts, command execution on Linux systems, and file modifications/deletions monitored through File Integrity Monitoring (FIM). 
 
-🔍 Digital Forensics & Incident Response (DFIR)
+## Incident 1: Windows Endpoint Activities 
 
-⚡ Detection Engineering
+### Findings: 
 
-📊 SIEM Monitoring
+The investigation identified the following activities: 
 
-☁️ Microsoft Security
+- User account student1 was created by account Bob (Event ID 4720).  
+- User account student1 was added to the local Administrators group (Event ID 4732).  
+- User account student1 was subsequently deleted by account Bob (Event ID 4726).  
+- The built-in Windows Guest account was enabled and detected by a custom Wazuh detection rule based on Event ID 4722.  
+- Successful interactive logons were observed for account Bob (Event ID 4624).
 
-## Technical Skills
+### Investigation Summary 
 
-- Wazuh
-- Microsoft Sentinel
-- KQL
-- Microsoft Defender for Endpoint
-- Microsoft Intune
-- Microsoft Entra ID
-- Azure
+The investigation revealed a sequence of administrative and security-related activities performed across both Windows and Ubuntu endpoints. 
 
-## Featured Project
+A temporary Windows account (student1) was created, granted elevated privileges through membership in the Administrators group, and later deleted by account Bob.  
+The built-in Guest account was also enabled and successfully detected through a custom Wazuh rule. 
 
-### Wazuh SOC Home Lab
+### Who, What, When, Where, Why, and How 
 
-Built a complete SOC environment using Wazuh, Sysmon and Windows/Linux telemetry.
+#### Who 
 
-Key areas covered:
+| | | |
+|---|---|---|
+| Bob | Created student1, added student1 to Administrators group, deleted student1, successfully logged on to Windows |
+| student1 | Newly created account later granted administrative privileges and subsequently deleted |
+| Guest | Built-in account enabled and detected by custom rule |
 
-✅ Infrastructure Deployment
+#### What 
 
-✅ Agent & Sysmon Integration
+The following activities occurred: 
 
-✅ Telemetry Analysis
+- User account creation. 
+- User account deletion. 
+- Local administrator group modification. 
+- Guest account activation. 
+- Interactive logon activity. 
 
-✅ SOC Dashboard Development
+#### When 
 
-✅ File Integrity Monitoring
+Windows account events occurred during telemetry generation activities 
 
-✅ Custom Detection Rules
+#### Where 
 
-✅ Incident Investigation
+The activities occurred on the following hosts: 
+
+| | | |
+|---|---|---|
+| Windows Endpoint (MYDFIR-Windows) | Account creation, deletion, logon events, Guest account activation, FIM alerts |
+
+#### Why 
+
+The purpose was to: 
+
+- Validate Windows security event collection 
+- Generate telemetry for SOC investigations 
+
+#### How 
+
+- User management activities generated Event IDs 4720, 4726 and 4732.  
+- Guest account activation generated Event ID 4722 which triggered a custom Wazuh rule.  
+
+| Question          | Answer                                                      |
+|-------------------|--------------------------------------------------------------------|
+| What happened?  | User accounts were created, privileged, and deleted|
+| When did it happen? | 21 Sept 2026 20:55 - 20:59 UTC |
+| Which hosts were involved? | MYDFIR-Windows, DESKTOP-3ULMB4N  |
+| Which accounts were changed? | student1 was created, added to Administrators and deleted; Guest was enabled |
+| What should we recommend? | Disable Unused Accounts, Monitor Privileged Account Changes |
+
+
+
 
