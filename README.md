@@ -17,7 +17,7 @@ To ensure stable performance of the Wazuh SOC Lab, the host machine should meet 
 | Requirement       | Specification                                                      |
 |-------------------|--------------------------------------------------------------------|
 | Operating System  | Windows 11                                                         |
-| Processor         | Multi-core CPU with virtualisation support (Intel VT-x or AMD-V)   |
+| Processor         | Multi-core CPU with virtualisation support (Intel)   |
 | Memory (RAM)      | 24 GB Minimum                                                      |
 | Storage           | 512 GB SSD Recommended                                             |
 | Hypervisor        | VMware Workstation Pro                                             |
