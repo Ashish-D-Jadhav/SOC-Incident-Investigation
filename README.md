@@ -75,6 +75,8 @@ The following observations confirmed successful operation:
 - ICMP connectivity lost.
 - Source IP present within IPTables DROP rules.
 
+<img width="1987" height="1063" alt="image" src="https://github.com/user-attachments/assets/340ecc85-1342-43eb-b5f2-8faeac5e2f74" />
+
 ## Recovery Procedure
 
 After validation testing, the blocked IP address was removed from IPTables.
